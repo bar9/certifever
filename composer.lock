@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b2cc01a07f6f4d327b6cc43b8d466fe3",
+    "content-hash": "b947e52628cb534635337d63e3f7ec92",
     "packages": [
         {
             "name": "api-platform/core",
@@ -257,6 +257,44 @@
                 }
             ],
             "time": "2021-08-01T16:42:35+00:00"
+        },
+        {
+            "name": "bar9/bolt-theme-skeleton",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/bar9/bolt-theme-skeleton.git",
+                "reference": "bb17781f90bbc31d414973ec3dc59c7aa8cda93a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/bar9/bolt-theme-skeleton/zipball/bb17781f90bbc31d414973ec3dc59c7aa8cda93a",
+                "reference": "bb17781f90bbc31d414973ec3dc59c7aa8cda93a",
+                "shasum": ""
+            },
+            "require": {
+                "bolt/core": "^5.0",
+                "twig/twig": "^3.0"
+            },
+            "type": "bolt-theme",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "A Bolt CMS theme skeleton based on tailwind 3, daisyui and storybook",
+            "homepage": "https://github.com/bar9/bolt-theme-skeleton",
+            "keywords": [
+                "DaisyUI",
+                "bolt",
+                "storybook",
+                "tailwind",
+                "theme"
+            ],
+            "support": {
+                "issues": "https://github.com/bar9/bolt-theme-skeleton/issues",
+                "source": "https://github.com/bar9/bolt-theme-skeleton/tree/v1.0.0"
+            },
+            "time": "2023-01-09T21:09:17+00:00"
         },
         {
             "name": "beberlei/doctrineextensions",
@@ -13601,5 +13639,5 @@
         "php": "^8.0"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.2.0"
+    "plugin-api-version": "2.3.0"
 }
