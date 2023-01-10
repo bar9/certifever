@@ -1,6 +1,9 @@
-Certivever - a future web app for practicing programming certifications
+Certivever
+==========
+
+a future web app for practicing programming certifications
 but also a tutorial for symfony / bolt cms / storybook / daisy ui
-=======================================================================
+
 
 ## step 1 (`git checkout step1` to skip most of this)
 * `composer create-project bolt/project certifever`
