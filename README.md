@@ -1,4 +1,4 @@
-Certivever
+Certifever
 ==========
 
 a future web app for practicing programming certifications
