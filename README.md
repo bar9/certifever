@@ -13,7 +13,7 @@ but also a tutorial for symfony / bolt cms / storybook / daisy ui
 * `git add .`
 * `git commit -m "default bolt installation"`
 * Create a github repository
-* `git remote add origin https://github.com/<youruser>/certifever.git
+* `git remote add origin https://github.com/<<youruser>>/certifever.git`
 * `git branch -M main`
 * `git push -u origin main`
 * `composer require bar9/bolt-theme-skeleton`
