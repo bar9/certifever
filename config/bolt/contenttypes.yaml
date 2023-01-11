@@ -4,6 +4,26 @@
 # The Homepage content type is a singleton: There can be only one record of this
 # content type.
 
+questions:
+    name: Questions
+    singular_name: Question
+    fields:
+        question:
+            type: text
+        answers:
+            type: collection
+            fields:
+                answer:
+                    type: set
+                    fields:
+                        value:
+                            type: text
+                        correct:
+                            type: checkbox
+        help: 
+            type: text
+    taxonomy: [ categories ]
+
 homepage:
     name: Homepage
     singular_name: Homepage
