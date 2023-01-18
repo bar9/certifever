@@ -1,0 +1,32 @@
+<div class="container mx-auto">
+    <div class="hero min-h-200">
+        <div class="hero-content">
+            <h1 class="text-3xl font-bold p-10">
+                {{ question.question }}
+            </h1>
+        </div>
+    </div>
+    <div class="grid grid-cols-2 gap-4 p-10">
+        {% for answer in question.answers %}
+            <div class="card card-side bg-base-100 shadow-xl bg-accent">
+                <div class="card-body">
+                    <span class="inline">
+                        <input type="checkbox" class="checkbox checkbox-lg" />
+                        {# TODO answer.answer ?? answer|raw is a hack to work both on storybook/twing and bolt/twig #}
+                        <p class="font-mono">{{ answer.answer ?? answer|raw}}</p>
+                    </span>
+                </div>
+                <div class="hidden p-8">
+                    {% if answer.correct %}
+                        <input data-hidden="true" type="checkbox" disabled checked="checked" class="checkbox checkbox-lg" />
+                    {% else %}
+                        <input data-hiden="true" type="checkbox" disabled class="checkbox checkbox-lg" />
+                    {% endif %}
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+    <div class="btn-group m-10 w-full text-center">
+        <button class="btn" onclick="document.querySelectorAll('.hidden').forEach(x => x.classList.remove('hidden'));">Check</button>
+    </div>
+</div>
