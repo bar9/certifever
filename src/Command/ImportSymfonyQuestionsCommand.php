@@ -20,23 +20,23 @@ class ImportSymfonyQuestionsCommand extends Command
     private ContentFactory $contentFactory;
     public static array $subjectsList = [
         "architecture",
-                    "automated-tests",
-                    "cache-http",
-                    "command-line",
-                    "config",
-                    "controllers",
+        "automated-tests",
+        "cache-http",
+        "command-line",
+        "config",
+        "controllers",
 //                    "dependency-injection", //invalid yaml
-                    "forms",
-                    "http",
-                    "misc",
-                    "php",
-                    "process",
-                    "psr",
-                    "routing",
-                    "security",
-                    "standardization",
-                    "validation",
-                    "yaml"
+        "forms",
+        "http",
+        "misc",
+        "php",
+        "process",
+        "psr",
+        "routing",
+        "security",
+        "standardization",
+        "validation",
+        "yaml"
     ];
 
     public function __construct(ContentFactory $contentFactory, string $name = null)
@@ -52,7 +52,7 @@ class ImportSymfonyQuestionsCommand extends Command
             $progressBar = new ProgressBar($output, $max);
             $progressBar->start();
             $parsed = array_map(
-                function($subj) use ($progressBar){
+                function ($subj) use ($progressBar) {
                     $data = Yaml::parse(
                         file_get_contents("https://raw.githubusercontent.com/certificationy/symfony-pack/master/data/$subj.yml"
                         ),
@@ -74,7 +74,7 @@ class ImportSymfonyQuestionsCommand extends Command
                     $answersField->setName('answers');
                     $questionEntity->addField($answersField);
 
-                    $sortOrder = 0 ;
+                    $sortOrder = 0;
                     foreach ($importModel['answers'] as $answer) {
                         $setField = new Field\SetField();
                         $setField->setName('answer');
@@ -100,7 +100,7 @@ class ImportSymfonyQuestionsCommand extends Command
             }
 
             return Command::SUCCESS;
-        } catch(Exception $e) {
+        } catch (Exception $e) {
             return Command::FAILURE;
         }
     }
