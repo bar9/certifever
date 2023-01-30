@@ -64,5 +64,5 @@ export const globalTypes = {
   },
 }
 
-export const DEFAULT_THEME = 'business';
+export const DEFAULT_THEME = 'garden';
 export const decorators = [(storyFn, context) => `<div data-theme="${context.globals.theme ?? DEFAULT_THEME}">${storyFn()}</div>`];

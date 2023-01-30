@@ -16,6 +16,7 @@
                         <p class="font-mono">{{ answer.answer ?? answer|raw}}</p>
                     </span>
                 </div>
+                {% if allowSolutions %}
                 <div class="hidden p-8">
                     {% if answer.correct %}
                         <input data-hidden="true" type="checkbox" disabled checked="checked" class="checkbox checkbox-lg" />
@@ -23,10 +24,13 @@
                         <input data-hiden="true" type="checkbox" disabled class="checkbox checkbox-lg" />
                     {% endif %}
                 </div>
+                {% endif %}
             </div>
         {% endfor %}
     </div>
+    {% if allowSolutions %}
     <div class="btn-group m-10 w-full text-center">
         <button class="btn" onclick="document.querySelectorAll('.hidden').forEach(x => x.classList.remove('hidden'));">Check</button>
     </div>
+    {% endif %}
 </div>

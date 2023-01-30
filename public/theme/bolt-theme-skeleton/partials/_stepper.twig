@@ -1,0 +1,14 @@
+<div class="overflow-x-auto">
+    <ul class="steps">
+        {% for step in steps %}
+            {% if loop.index < current %}
+                <li class="step step-neutral">{{ loop.index }}</li>
+            {% elseif loop.index == current %}
+                <li class="step step-neutral" data-content="★">{{ loop.index }}</li>
+            {% else %}
+                <li class="step" >{{ loop.index }}</li>
+            {% endif %}
+        {% endfor %}
+        <li class="step" data-content="●">Evaluation</li>
+    </ul>
+</div>

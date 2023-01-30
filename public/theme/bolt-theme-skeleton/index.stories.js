@@ -2,13 +2,21 @@ import twigQuestion from "./partials/_question.twig";
 import {buildStory} from "./.storybook/async-helper";
 
 export default {
-  title: "Single Question"
+  title: "Single Question",
+  argTypes: {
+    allowSolutions: {
+      control: {
+        type: "boolean"
+      },
+    },
+  },
 }
 
-const Template = ({question}) =>
-  twigQuestion({question});
+const Template = ({question, allowSolutions}) =>
+  twigQuestion({question, allowSolutions});
 
 export const Default = buildStory({
+  allowSolutions: true,
   question: {
     question: "What... is your favourite colour?",
     answers: [
@@ -24,6 +32,7 @@ export const Default = buildStory({
 }, Template);
 
 export const ManyAnswers = buildStory({
+  allowSolutions: true,
   question: {
     question: "What... is your favourite colour?",
     answers: [
