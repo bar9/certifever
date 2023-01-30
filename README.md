@@ -27,3 +27,9 @@ but also a tutorial for symfony / bolt cms / storybook / daisy ui
 * in the `public/theme/bolt-theme-skeleton` dir: `yarn`
 * `npx tailwindcss -i ./css/input.css -o ./css/output.css`
 At this point, you should see a styled output of a welcome page.
+
+## design of questonnaire
+
+* 2 initial endpoints: `/start-training` and `/question`
+* `question` takes a `QuestionnaireState` from queryparams (defaulting to all empty answers)the token, and a navigation target (default first question, 0)
+* the `question` view renders a single question, silently passes the token to each consecutive request, and mutates `QuestionnaireState` via query params
