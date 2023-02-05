@@ -12,12 +12,12 @@ class Questionnaire
         return new self;
     }
 
-    public function startTraining(string $topic, int $num, int $time, int $unit = self::SECONDS): QuToken
+    public function startTraining(string $topic, int $num, int $duration, int $unit = self::SECONDS): QuToken
     {
-        $time *= $unit; // all times in seconds in here
+        $duration *= $unit; // all times in seconds in here
         $questions = [];
         //TODO tbd: how do we pass the questions to the token? uuids?
-        $token = new QuToken($time, $questions);
+        $token = new QuToken($duration, $questions);
         return $token;
     }
 }

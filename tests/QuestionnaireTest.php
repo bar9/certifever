@@ -19,7 +19,7 @@ class QuestionnaireTest extends TestCase {
     }
 
     function testStartTraining(): void {
-        $token = $this->questionnaire->startTraining(topic: "PHP", num: 10, time: 10, unit: Questionnaire::MINUTES);
+        $token = $this->questionnaire->startTraining(topic: "PHP", num: 10, duration: 10, unit: Questionnaire::MINUTES);
         self::assertInstanceOf(QuToken::class, $token);
     }
 }
