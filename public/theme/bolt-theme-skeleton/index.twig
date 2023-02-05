@@ -1,8 +1,9 @@
 {% extends 'partials/_layout.twig' %}
 
 {% setcontent question = 'questions' random limit 1 returnsingle %}
-{% set steps = {1,2,3,4,5} %}
+{% set steps = [1,2,3,4,5] %}
 {% set current = 1 %}
+{% set allowSolutions = true %}
 
 {% block main %}
 {{ include('partials/_stepper.twig') }}
